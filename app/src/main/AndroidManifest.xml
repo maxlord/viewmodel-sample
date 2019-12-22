@@ -31,6 +31,15 @@
 			</intent-filter>
 		</activity>
 
+		<activity
+			android:name=".presentation.step3.ChronoActivity3"
+			android:label="LC Step3">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
 		<activity android:name=".MainActivity">
 			<!--			<intent-filter>-->
 			<!--				<action android:name="android.intent.action.MAIN" />-->
