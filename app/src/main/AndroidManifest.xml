@@ -40,6 +40,14 @@
 			</intent-filter>
 		</activity>
 
+		<activity
+			android:name=".presentation.step4.LocationActivity"
+			android:label="LC Step4">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+
 		<activity android:name=".MainActivity">
 			<!--			<intent-filter>-->
 			<!--				<action android:name="android.intent.action.MAIN" />-->

@@ -12,7 +12,7 @@ import java.util.*
 class LiveDataTimerViewModel : ViewModel() {
 
 	companion object {
-		private val ONE_SECOND = 1000L
+		private const val ONE_SECOND = 1000L
 	}
 
 	private val elapsedTime: MutableLiveData<Long> = MutableLiveData()
