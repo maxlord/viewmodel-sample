@@ -36,6 +36,20 @@ class LocationActivity : AppCompatActivity() {
 		}
 	}
 
+	override fun onRequestPermissionsResult(
+		requestCode: Int,
+		permissions: Array<out String>,
+		grantResults: IntArray
+	) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+		if (grantResults.size > 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED
+			&& grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+			bindLocationListener()
+		} else {
+			Toast.makeText(this@LocationActivity, "This sample requires Location Access", Toast.LENGTH_LONG).show()
+		}
+	}
+
 	private fun bindLocationListener() {
 		BoundLocationManager.bindLocationListenerIn(this, gpsListener, applicationContext)
 	}
